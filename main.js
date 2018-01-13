@@ -6,8 +6,14 @@ const url = require('url')
 let win
 
 function createWindow () {
+  //cannot require screen module before app is ready
+  const screen = require('electron').screen;
+  var display = screen.getPrimaryDisplay();
+  var mainScreen = display.size;
+  var screenHeight = mainScreen.height / 2;
+  var screenWidth = mainScreen.width / 2;
   // Créer le browser window.
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({width: screenWidth, height: screenHeight})
 
   // load index.html to display to the window.
   win.loadURL(url.format({
@@ -17,7 +23,7 @@ function createWindow () {
   }))
 
   // DevTools.
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null
