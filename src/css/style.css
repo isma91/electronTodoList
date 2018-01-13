@@ -9,3 +9,7 @@ html,body {
 	padding: 0px;
 	font-family: 'Abel-Regular', sans-serif;
 }
+
+.center {
+	text-align: center;
+}
