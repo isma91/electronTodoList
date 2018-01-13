@@ -1,8 +1,8 @@
 {
-  "name": "Todo List",
+  "name": "todo-list",
   "version": "1.0.0",
   "description": "",
-  "main": "src/js/electron.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
