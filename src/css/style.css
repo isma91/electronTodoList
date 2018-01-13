@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Abel-Regular';
+	font-style: normal;
+	src: url('../font/Abel-Regular.ttf');
+}
+html,body {
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Abel-Regular', sans-serif;
+}
