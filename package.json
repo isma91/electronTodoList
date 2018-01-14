@@ -1,7 +1,7 @@
 {
   "name": "todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app to not forget what you need to do",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -10,5 +10,8 @@
   "license": "GNU License v3.0",
   "devDependencies": {
     "electron": "1.7.10"
+  },
+  "dependencies": {
+    "nedb": "^1.8.0"
   }
 }
