@@ -4,18 +4,17 @@ const url = require('url')
 
 //we use let to have a global var;
 let win
-
-function createWindow () {
+function createWindow() {
   //cannot require screen module before app is ready
   const screen = require('electron').screen;
   var display = screen.getPrimaryDisplay();
   var mainScreen = display.size;
-  var screenHeight = mainScreen.height * (3/4);
-  var screenWidth = mainScreen.width * (3/4);
-  // Créer le browser window.
-  win = new BrowserWindow({width: screenWidth, height: screenHeight})
+  var screenHeight = mainScreen.height * (3 / 4);
+  var screenWidth = mainScreen.width * (3 / 4);
+  //Create le browser window.
+  win = new BrowserWindow({ width: screenWidth, height: screenHeight })
 
-  // load index.html to display to the window.
+  // load login.html to display to the window.
   win.loadURL(`file://${__dirname}/src/html/home.html`);
 
   // DevTools.
