@@ -16,14 +16,10 @@ function createWindow () {
   win = new BrowserWindow({width: screenWidth, height: screenHeight})
 
   // load index.html to display to the window.
-  win.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  win.loadURL(`file://${__dirname}/src/html/home.html`);
 
   // DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null
