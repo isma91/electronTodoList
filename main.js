@@ -10,8 +10,8 @@ function createWindow () {
   const screen = require('electron').screen;
   var display = screen.getPrimaryDisplay();
   var mainScreen = display.size;
-  var screenHeight = mainScreen.height / 2;
-  var screenWidth = mainScreen.width / 2;
+  var screenHeight = mainScreen.height * (3/4);
+  var screenWidth = mainScreen.width * (3/4);
   // Créer le browser window.
   win = new BrowserWindow({width: screenWidth, height: screenHeight})
 
@@ -24,6 +24,8 @@ function createWindow () {
   win.on('closed', () => {
     win = null
   })
+
+  //console.log(app.getAppPath());
 }
 
 app.on('ready', createWindow)
