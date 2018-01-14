@@ -15,7 +15,7 @@ function createWindow() {
   win = new BrowserWindow({ width: screenWidth, height: screenHeight })
 
   // load login.html to display to the window.
-  win.loadURL(`file://${__dirname}/src/html/home.html`);
+  win.loadURL(`file://${__dirname}/src/html/login.html`);
 
   // DevTools.
   //win.webContents.openDevTools()
